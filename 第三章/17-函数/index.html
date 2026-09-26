@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //-----------------------------------函数---------------------------------------
+    // function add(x,y){
+    //     console.log(x+y);
+    // }
+    // add(10,20);
+    // add(100,200);
+    // add(5,6);
+    // add(10,5);
+
+    // function add1(x,y){
+    //     return x+y;
+    // }
+    // var result=add1(10,20);
+    // console.log(result);
+    
+
+    //-----------------------------------对象-----------------------------------------
+    //对象object  js中的对象相当于python中的字典  也是键值对
+    // var user={
+    //     name:"akjghjahg",
+    //     age:15,
+    //     jobs:["akhg",15],
+    //     flag:true,
+    //     getName:function add(x,y){
+    //         return x+y;
+    //     }
+    // }
+
+    // //对象的读取方式：对象名，属性
+    // console.log(user.name);
+    // console.log(user.jobs);
+
+    //-----------------------------------Math-------------------------------------
+    //Math.abs方法返回参数的绝对值
+    // Math.abs(1)//1
+    // Math.abs(-1)//1
+    // //Math.max方法返回参数中最大的那个值.Math.min返回最小的那个值，如果参数为空，Math.min返回Infinity，Math.max返回-Infinity
+    // Math.max(2,-1,5);//5
+    // Math.min(2,-1,5);//-1
+    // Math.min();Infinity
+    // Math.max();-Infinity
+
+    // //floor向下取整   ceil向上取整 
+    // var num1=10.9;
+    // console.log(Math.floor(num1));//10  floor只能向下取整
+    // console.log(Math.ceil(num1));//11    ceil向上取整
+
+    // //Math.random() >=0  Math.random() <1  从0到1之间随机抽一个小数
+    // console.log(Math.random());
+    // //10 20
+    // function getRandomArbitrary(min,max){
+    //     var result=Math.random()*(max-min)+min;
+    //     result=Math.floor(result)
+    //     console.log(result);
+    // }
+
+    //-------------------------------------Date对象----------------------------------------------------
+    console.log(Date.now());//单位为毫秒.
+    //1789277741683
+    console.log(new Date(1789277741683));
+    console.log(new Date());
+    console.log(new Date(1789277741683).getDate());
+    console.log(new Date(1789277741683).getDay());
+    console.log(new Date(1789277741683).getFullYear());
+    //月份从0~11  0：1月  11：12月
+    var year=new Date(1789277741683).getFullYear();
+    var month=new Date(1789277741683).getMonth()+1;
+    var day=new Date(1789277741683).getDate();
+
+    function leftdays(){
+        var today=new Date();
+        var endYear=new Date(today.getFullYear(),11,31,23,59,59,999);
+        var msPerDay=24*60*60*1000;
+        var result=(endYear.getTime()-today.getTime()) / msPerDay;
+        console.log(Math.floor(result));
+    }
+    leftdays();
+
+
+    </script>
+</body>
+</html>

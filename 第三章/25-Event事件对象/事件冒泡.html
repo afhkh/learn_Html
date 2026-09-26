@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(161, 157, 157);
+        }
+        .box2{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="bt1" class="box1">
+        <div id="bt2" class="box2"></div>
+    </div>
+    
+
+    <script>
+        var bt1=document.getElementById("bt1");
+        var bt2=document.getElementById("bt2");
+
+        bt1.onclick=function(){
+            console.log("bt1");
+        }
+        bt2.onclick=function(event){
+            event.stopPropagation(); //防止事件冒泡，就是点击box2会同时显示box1和box2
+            console.log("bt2");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //--------------------------------charAt-----------------------------
+        // var str = "itbakshglah";
+        // console.log(str.length);
+        // console.log(str.charAt(4));//k
+        // console.log(str.charAt(str.length-1));
+
+        //---------------------------------concat-------------------------------
+        //concat 连接字符串，返回新的字符串
+        // var str1="hello";
+        // var str2="World";
+        // var str3="!";
+        // var str4=100;
+        // var result=str1.concat(str2);
+        // console.log(result);
+        // console.log(str1);
+        // console.log(str2);
+
+        // result2=str1+str2+str3+str4;
+        // console.log(result2);
+
+        //concat和加号还是有区别的；
+        //  concat不管什么类型直接合并成字符串
+        //  加号是遇到数字类型的直接做运算，遇到字符串和字符串相连接
+
+        //--------------------------------substring---------------------------------------
+        //substring  索引所选字符串中的子串 主字符串不变  参数1开始位置  参数2：结束位置（不包含该位置）  不写参数2：默认到原字符串结尾
+        //如果第一个参数比第二个参数大，则自动调换两个参数的位置
+        //如果参数为负数，substring的会将负数参数转化为0
+        // var name="iabgakjhg";
+        // console.log(name.substring(2,8));  //不包含8
+        // console.log(name);
+
+        //----------------------------------substr------------------------------------------
+        //substr 方法用于从原字符串取出子字符串并返回，不改变原字符串，跟substring方法相同
+        //substr 第一个参数为  子字符串开始位置  第二个参数是子字符串长度
+        
+
+        // var name1="hakgahgag";
+        // console.log(name1.substr(2,4));
+        // //若省略第二个参数，则表示子字符串一直到原字符串的结束
+        // console.log(name1.substr(2));
+
+        //如果第一个参数是负数，表示倒数计算的字符位置，如果第二个参数是负数，将自动转为0，因此会返回空字符串
+        // console.log(name1.substr(-5));
+        // console.log(name1.substr(1,-5));
+
+        //------------------------------------indexOf---------------------------------------
+        // //indexOf  查看一个字符串在另一个字符串中第一次出现中的位置，存在就返回其位置，不存在就返回-1
+        // var hello="helloworld";
+        // //判断上述字符串中是否存在e这个词汇
+        // console.log(hello.indexOf("e"));
+        // console.log(hello.indexOf("world"))
+        // //indexOf还可以接受第二个参数，表示从该位置开始向后匹配
+
+        // console.log(hello.indexOf("e",5)); //-1 表示从第5位开始后面没有e这个字符
+
+        //--------------------------------trim-----------------------------------------
+        // //trim方法用于去除字符串两端的空格，返回一个新字符串，不改变原来的字符串
+        // var haha="  helllohey  ";
+        // console.log(haha);
+        // console.log(haha.trim());
+        // //该方法去除的不仅是空格，还包括制表符\t \v 换行符\n 和回车符\r  不过字符串中间的空格去不掉
+
+        // //新方法  trimEnd()和trimStart()方法，分别去掉前面和后面的空格
+
+        //-------------------------split----------------------------------------------
+        //split方法按照给定规则分割字符串，返回一个由分割的子字符串组成的数组
+
+        // var name="akg|aure|jhgn|ara";
+        // console.log(name.split("|"));
+        // //如果分割规则是空字符串，则返回数组的成员是原字符串中的每一个字符.
+        // console.log(name.split(""));
+        // console.log(name.split("",5)) //返回分割后数组的前5个字符串
+
+        //-----------------------Array.isArray---------------------------------------
+        // //Array.isArray方法返回一个布尔值，表示参数是否为数组，它可以弥补typeof运算符的不足
+        // var arr=[100,"dhajkfg",56];
+        // console.log(typeof arr);        //object     数组的关键子Array
+        // console.log(Array.isArray(arr));//true       不是数组就是False
+
+
+        //--------------------------push   pop-------------------------------------------------
+        //push方法用于在数组的末端添加一个或多个元素，并返回添加新元素后的数组长度，注意，该方法会改变原数组
+        //pop方法用于删除数组的最后一个元素，并返回该元素，注意，该方法会改变原数组.      删除每次只能删除一个
+        //shift方法用于删除数组的第一个元素，并返回该元素，注意：该方法会改变原数组.
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

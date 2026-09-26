@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // var s=new Set();
+        // var arr=[10,20,30,40,50];
+        // arr.forEach(x=>s.add(x));  //set结构不会添加重复的值
+
+        // console.log(s);
+
+        // var s=new Set([10,20,30]);
+        // console.log(s)   //Set可以直接塞入一个数组
+
+        // var arr=[10,20,30,10,20];
+        // // var s=new Set(arr);
+        // // console.log(s);
+        // // //Set也可以使用扩展运算符
+        // // console.log([...s]);
+
+        // console.log([...new Set(arr)]);
+        // console.log([...new Set("abcabccdd")].join(""));
+
+        var s=new Set();
+        s.add(5);
+        s.add("5");
+        console.log(s);//往set中添加值的时候，不会发生类型转换，所以5和“5”是不同值
+        console.log(s.size);
+        
+        
+        
+
+    </script>
+</body>
+</html>

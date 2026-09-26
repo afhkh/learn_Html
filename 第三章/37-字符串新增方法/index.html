@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var allStr="helloworld";
+        var str0="hell";
+
+        console.log(allStr.includes(str0));//true
+        console.log(allStr.endsWith(str0));//false
+        console.log(allStr.startsWith(str0));//true
+
+        //-----------------------------------repeat-----------------
+        var x='x';
+        //xxx
+        console.log(x.repeat(3))
+
+        //----------------------------pabStart  pabEnd-----------------自动补全
+        var h='hello';
+        console.log(h.padStart(10,'ab'));//ababahello
+        console.log(h.padEnd(10,'ab'));//helloababa
+
+        //---------------trimStart(去掉前面空格) trimEnd(去掉后面空格)---------------------
+        const str="  akgh  ";
+        str.trim();
+        str.trimStart();
+        str.trimEnd();
+
+        //------------------at---------------------
+        var str1="fagakjtgtag";
+        console.log(str1.at(2));
+
+
+
+    </script>
+</body>
+</html>

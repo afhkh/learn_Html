@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            color: red;
+        }
+        #desc{
+            color: blue;
+        }
+        .t1{
+            color: aqua;
+            font-size: 30px;
+        }
+        .t2{
+            color: rebeccapurple;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>全局选择器：*</h3>
+    <h3>元素选择器：标签名称</h3>
+    <h3>类选择器：class属性名（.）</h3>
+    <h3>ID选择器：ID属性名（#）</h3>
+
+    <p class="text" id="desc">我是P标签内容</p>
+
+    <p>
+        优先级从高到低：行内样式>ID选择器>类选择器>元素选择器
+    </p>
+
+    <p class="t1 t2">我是测试文本,类选择器下面会覆盖上面</p>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+            1.var关键字：函数级的作用域
+            2.let关键字：
+                1.let是块级作用域（花括号级的作用）
+                2.let是不存在变量提升的
+                3.let是不能重复声明的（多个作用域内可以重复声明）
+        */
+
+        // if(true){
+        //     var i =10;
+        // }
+        // console.log(i);   
+
+
+
+        // if(true){
+        //     let i =10;
+        // }
+        // console.log(i);//报错
+
+        // for(let i=0;i<10;i++){
+        //     console.log(i)
+        // }
+        // for(let i=0)
+
+
+        //-----------------------------------------------------------
+        var a=[];
+        for (var i =0;i<10;i++){
+            a[i]=function(){
+                console.log(i);
+            }
+        }
+        a[6]();//10
+        //let定义的i会在每次循环创建一个新的i，而var不会，所以会被覆盖。
+        var a=[];
+        for (let i =0;i<10;i++){
+            a[i]=function(){
+                console.log(i);
+            }
+        }
+        a[6]();//6
+
+        // console.log(i);
+        // var i=10; //undefined
+
+        // console.log(i);
+        // let i=10;//报错   原来没有值，后面又有值了，变量提升了，所以报错
+
+
+
+        //let不允许在相同的作用域内，重复声明同一个变量
+        // function func(){
+        //     let a=10;
+        //     var a=1;
+        // }
+        //报错
+
+        // function func(){
+        //     let a=10;
+        //     let a=1;
+        // }
+        //报错
+
+
+    </script>
+</body>
+</html>

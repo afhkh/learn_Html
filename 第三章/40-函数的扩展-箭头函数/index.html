@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn1(){
+
+        }
+        //第二种：赋值方式声明函数
+        var fn2=function(){
+
+        }
+        //箭头函数=>
+
+        var fn3 =x =>x//一个参数不需要加括号
+        var fn4=()=>10 //没有参数时要加括号
+        var fn5 =(x,y)=>x+y
+
+        var fn6=function(x,y){
+            var z=10;
+            return x+y+z;
+        }
+
+
+        var fn7=function(){
+            return{
+                x:10,
+                y:20
+            }
+        }//返回一个对象
+
+        var fn8 =()=>({x:10,y:20})
+
+        var arr=[10,20,30];
+        arr.map(function(element,index){
+            console.log(element);
+        })
+        
+        arr.map((element,index)=>{
+            console.log(element);
+        })
+
+
+        // var name="fakjhg"
+        // var user={
+        //     name:"akgf",
+        //     age:20,
+        //     getName(){
+        //         setTimeout(function(){
+        //             console.log(this.name); //fakjhg
+        //         })
+        //     }
+        // }
+
+        var name="fakjhg"
+        var user={
+            name:"akgf",
+            age:20,
+            getName(){
+                setTimeout(()=>{
+                    console.log(this.name); //akgf  箭头函数没有自己的this，而是用上一层作用域的this
+                })
+            }
+        }
+        user.getName();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <a href=https://www.bilibili.com/" id="Bili">B站</a>
+
+    <script>
+        var btn=document.getElementById("btn");
+        var Bili=document.getElementById("Bili");
+        //Event事件对象 其实就是参数
+        btn.onclick=function(event){
+            console.log();     //target 点击谁就打印谁
+            event.target.innerHTML="点击之后";
+            console.log(event.type)//type 事件类型   click
+        }
+        Bili.onclick=function(event){
+            event.preventDefault();  //使用此方法可以阻止浏览器的默认行为，比如点击超链接就跳转
+            console.log("你点了是吧");
+        }
+
+
+    </script>
+</body>
+</html>

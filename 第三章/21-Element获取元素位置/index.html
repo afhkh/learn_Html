@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            /* 内边距 */
+            padding: 10px; 
+            margin: 20px;
+            background: green;
+        }
+        h3{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+    <h3>标题4</h3>
+    <h3>标题5</h3>
+
+    <script>
+
+        var box=document.getElementById("box");
+        console.log(box.clientWidth);
+        console.log(box.clientHeight);
+
+        //获取视口高度（屏幕高度）
+        console.log(document.documentElement.clientHeight);
+        //获取页面高度
+        console.log(document.body.clientHeight);
+
+        console.log("------------------------------------------------------");
+        
+        //元素总高度和总宽度 包括padding，但不包括border，margin包括溢出的不可见内容
+        console.log(box.scrollWidth);
+        console.log(box.scrollHeight);
+
+        //获取视口高度（屏幕高度）
+        console.log(document.documentElement.clientHeight);
+        //获取页面高度
+        console.log(document.body.clientHeight);
+
+        //获取滚动高度
+        console.log(document.documentElement.scrollTop);
+
+        //元素的CSS垂直高度（单位像素），包括元素本身的高度，padding和border
+        console.log(box.offsetWidth);
+        console.log(box.offsetHeight);
+
+        
+        
+        
+
+    </script>
+</body>
+</html>
